@@ -15,10 +15,13 @@
     <string name="title_activity_home">Home</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="splash_welcome" >Welcome To eNcash</string>
-    <string name="splash_haveAccount">Already have an Account</string>
+    <string name="splash_welcome" >Welcome To</string>
+    <string name="splash_haveAccount">New to eNcash</string>
     <string name="title_activity_sign_in">SignIn</string>
 
     <string name="login_title">Login</string>
+
+    <string name="sign_up_title">Sign Up</string>
+    <string name="title_activity_splash">SplashActivity</string>
 
 </resources>

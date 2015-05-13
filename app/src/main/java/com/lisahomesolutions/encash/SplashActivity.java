@@ -1,45 +1,44 @@
 package com.lisahomesolutions.encash;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageButton;
 
+public class SplashActivity extends ActionBarActivity {
 
-public class HomeActivity extends ActionBarActivity {
-
+    static int SPLASH_TIME_OUT = 1000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
-        ImageButton ibtnLogin = (ImageButton) findViewById(R.id.ibtnLogin);
-        ImageButton ibtnSignUp = (ImageButton) findViewById(R.id.ibtnSignUp);
+        setContentView(R.layout.activity_splash);
+             new Handler().postDelayed(new Runnable() {
 
-        ibtnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent loginIntent = new Intent("com.lisahomesolutions.encash.SignInActivity");
-                startActivity(loginIntent);
-            }
-        });
+            /*
+             * Showing splash screen with a timer. This will be useful when you
+             * want to show case your app logo / company
+             */
 
-        ibtnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent loginIntent = new Intent("com.lisahomesolutions.encash.SignUpActivity");
-                startActivity(loginIntent);
+            public void run() {
+                // This method will be executed once the timer is over
+                // Start your app main activity
+                Intent homeIntent = new Intent("com.lisahomesolutions.encash.HomeActivity");
+                startActivity(homeIntent);
+
+                // close this activity
+                finish();
             }
-        });
+        }, SPLASH_TIME_OUT);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_home, menu);
+        getMenuInflater().inflate(R.menu.menu_splash, menu);
         return true;
     }
 

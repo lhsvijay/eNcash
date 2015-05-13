@@ -1,32 +1,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/FullScreen"
-    android:orientation="vertical"
+    style="@style/FullScreen"  android:orientation="vertical"
     tools:context="com.lisahomesolutions.encash.SignInActivity">
-    <TextView android:text="@string/login_title" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:gravity="center"  style="@style/NormalText"
-        android:textSize="30sp" android:textColor="#F20201" android:padding="20dp"
-        />
+    <TextView android:text="@string/login_title" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:gravity="center" android:layout_gravity="center"
+        style="@style/NormalText" android:textSize="30sp" android:textColor="#F20201"
+        android:padding="15dp" android:background="@drawable/lineseperator"  />
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
-        tools:context="com.lisahomesolutions.encash.SignInActivity"
-        android:orientation="vertical"
-        android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:gravity="center_vertical" >
-        <EditText style="@style/NormalText.InputControl" android:drawableLeft="@drawable/mobile"
-            android:layout_gravity="center"
-            android:id="@+id/txtUserName"/>
-        <EditText style="@style/NormalText.InputControl" android:drawableLeft="@drawable/unlock"
-            android:layout_marginTop="20px" android:layout_gravity="center"
-            android:id="@+id/txtPassword" android:inputType="textPassword" />
-
+        <RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android" style="@style/Container.LoginInputControl"
+            android:layout_gravity="center">
+            <ImageView style="@style/LeftInputControlImage" android:src="@drawable/mobile"  />
+            <EditText style="@style/NormalText.InputControl" android:id="@+id/txtUserName"
+                android:inputType="textPassword" />
+        </RelativeLayout>
+        <RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android" style="@style/Container.LoginInputControl"
+            android:layout_gravity="center">
+            <ImageView style="@style/LeftInputControlImage" android:src="@drawable/unlock"  />
+            <EditText style="@style/NormalText.InputControl" android:id="@+id/txtPassword"
+                android:inputType="textPassword" />
+        </RelativeLayout>
 
         <ImageButton
             android:layout_width="260px" android:layout_height="80px"
             android:layout_gravity="center" android:id="@+id/ibtnLogin"
-            android:layout_marginTop="10dp" android:scaleType="centerInside"
+            android:layout_marginTop="40dp" android:scaleType="centerInside"
             android:adjustViewBounds="true" android:background="#00000000"
             android:src="@drawable/login_button" />
-    </LinearLayout>
-
 </LinearLayout>

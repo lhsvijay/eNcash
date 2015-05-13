@@ -3,53 +3,43 @@
     android:orientation="vertical"
     tools:context="com.lisahomesolutions.encash.HomeActivity">
 
-    <TextView android:text="@string/splash_welcome"
-        style="@style/NormalText.Wrapped.Center"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:textColor="#A58E80"
-        android:textSize="30sp"
-        />
     <ImageView
+        android:layout_width="250dp"
+        android:layout_height="130dp"
         android:layout_marginTop="20dp"
-        android:layout_width="320px"
-        android:layout_height="140px"
         android:layout_gravity="center"
         android:scaleType="centerInside"
         android:adjustViewBounds="true"
         android:id="@+id/imageView"
         android:src="@drawable/encashlogo" />
     <ImageButton
-        android:layout_width="260px"
-        android:layout_height="80px"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
+        android:id="@+id/ibtnLogin"
+        android:layout_marginTop="35dp"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:background="#00000000"
+        android:src="@drawable/buttonlogin" />
+    <TextView android:text="@string/splash_haveAccount" style="@style/NormalText.Wrapped.Center"
+        android:textSize="21sp" android:textColor="#939393"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        />
+    <ImageButton
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
         android:scaleType="centerInside"
         android:adjustViewBounds="true"
         android:id="@+id/ibtnSignUp"
         android:background="#00000000"
         android:src="@drawable/buttonsignup" />
 
-    <TextView android:text="@string/splash_haveAccount" style="@style/NormalText.Wrapped.Center"
-        android:textSize="24sp" android:textColor="#4E4545"
-        android:layout_gravity="center"
-        android:layout_marginTop="35dp"
-        />
-    <ImageButton
-        android:layout_width="260px"
-        android:layout_height="80px"
-        android:layout_gravity="center"
-        android:id="@+id/ibtnLogin"
-        android:layout_marginTop="10dp"
-        android:scaleType="centerInside"
-        android:adjustViewBounds="true"
-        android:background="#00000000"
-        android:src="@drawable/buttonlogin" />
-
     <TextView android:text="@string/app_poweredBy" style="@style/NormalText.Wrapped.Center"
         android:textSize="14sp" android:textColor="#000000"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp" />
-
+        android:layout_marginTop="70dp"  />
 
 </LinearLayout>

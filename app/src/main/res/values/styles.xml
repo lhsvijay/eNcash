@@ -7,8 +7,8 @@
     </style>
 
     <style name="FullScreen">
-        <item name="android:layout_width" >fill_parent</item>
-        <item name="android:layout_height" >fill_parent</item>
+        <item name="android:layout_width" >match_parent</item>
+        <item name="android:layout_height" >match_parent</item>
         <item name="android:background" >@drawable/backgroundgradient</item>
     </style>
 
@@ -27,11 +27,34 @@
     </style>
 
     <style name="NormalText.InputControl">
-        <item name="android:padding">10px</item>
         <item name="android:textSize">18sp</item>
         <item name="android:color">#505050</item>
-        <item name="android:layout_width">340px</item>
-        <item name="android:layout_height">130px</item>
-        <item name="android:gravity">center</item>
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_marginLeft">45dp</item>
+        <item name="android:background">@drawable/roundedgerectangle</item>
     </style>
+
+    <style name="LeftInputControlImage">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="Container">
+        <item name="android:layout_width">300dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+
+    <style name="Container.LoginInputControl">
+        <item name="android:layout_marginTop">30dp</item>
+    </style>
+
+    <style name="Container.InputControl">
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+
+
 </resources>
